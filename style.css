@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, "sans-serif";
+}
+
+.header {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  font-weight: bolder;
+}
+
+.logo-name {
+  font-size: 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: black;
+}
+
+.logo img {
+  width: 50px;
+  height: auto;
+  object-fit: contain;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.header-icons {
+  display: flex;
+  gap: 1.5rem;
+  cursor: pointer;
+}
+
+.banner {
+  background-image: url("./assets/images/Rectangle\ 1.png");
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-align: center;
+  position: relative;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-h1 {
+  font-weight: bolder;
+}
+
+.breadcrumb {
+  display: flex;
+  gap: 0.5rem;
+  color: black;
+}
+
+.breadcrumb-home {
+  font-weight: bolder;
+}
+
+.breadcrumb-arrow {
+  font-weight: bolder;
+}
+
+.banner img {
+  width: 50px;
+  height: auto;
+  object-fit: contain;
+  
+}
+
+.cart-container {
+  max-width: 1440px;
+  margin: 2rem auto;
+  padding:  1rem;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+}
+
+.cart-table {
+  border-radius: 8px;
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.cart-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr auto;
+  padding: 1rem;
+  background-color: #fdf6f0;
+  font-weight: bold;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr auto;
+  padding: 1rem;
+  align-items: center;
+}
+
+#delete {
+  color: #b4a02bd5;
+}
+
+.total {
+  color: #b4a02bd5;
+}
+
+.title {
+  color: #808080;
+}
+
+.price {
+  color: #808080;
+}
+
+.product-info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.product-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+}
+
+.quantity-input {
+  width: 40px;
+  padding: 0.5rem;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.cart-totals {
+  background-color: #fdf6f0;
+  border-radius: 8px;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  padding: 2rem;
+}
+
+.totals-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 1rem;
+  background-color: #faf3ea;
+  color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.features {
+  height: 200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #faf3ea;
+  margin-top: 2rem;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.feature-icon {
+  font-size: 2rem;
+  color: #000;
+}
+
+.feature-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-title {
+  font-weight: bold;
+}
+
+.feature-subtitle {
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .cart-container {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-header {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  .cart-header :nth-child(4),
+  .cart-header :nth-child(5) {
+    display: none;
+  }
+
+  .cart-item {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  .cart-item :nth-child(4),
+  .cart-item :nth-child(5) {
+    display: none;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-header {
+    display: none;
+  }
+
+  .cart-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .product-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .price,
+  .quantity-input,
+  .item-subtotal {
+    margin-top: 0.5rem;
+  }
+}
